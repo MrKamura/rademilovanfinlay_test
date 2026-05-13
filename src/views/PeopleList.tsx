@@ -26,7 +26,9 @@ export default function PeopleList() {
               className="w-10 h-10 rounded-full border-2 border-violet-500 object-cover"
             />
             <div>
-              <div className="font-bold text-gray-700">{person.name}</div>
+              <div className="font-[Koulen,sans-serif] font-normal text-[16px] leading-[15px] tracking-[0.02em] text-[#1E0E4C]">
+                {person.name}
+              </div>
               <div className="text-gray-600">{person.ageInYears} years old</div>
             </div>
           </Link>

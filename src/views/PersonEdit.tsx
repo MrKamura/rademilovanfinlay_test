@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { NumericGroupedInput } from '@/components/NumericGroupedInput'
 import { useStore } from '@/store'
 
 export default function PersonEdit() {
@@ -23,26 +24,29 @@ export default function PersonEdit() {
         &larr; Back
       </Link>
 
-      <div className="flex items-center gap-3">
+      <div className="group/person flex items-center gap-3">
         <img
           src="/img.png"
           alt={person.name}
-          className="w-14 h-14 rounded-full border-2 border-violet-500 object-cover"
+          className="size-[80px] shrink-0 rounded-full border-2 border-transparent object-cover transition-colors group-focus-within/person:border-violet-500"
         />
-        <div>
-          <label htmlFor="hours-input" className="block text-sm font-bold tracking-wide text-gray-700">
+        <div className="flex min-w-0 flex-1 flex-col gap-3">
+          <label
+            htmlFor="hours-input"
+            className="block font-[Koulen,sans-serif] font-normal text-[16px] leading-[15px] tracking-[0.02em] text-[#1E0E4C] uppercase group-focus-within/person:text-[#3D06D7]"
+          >
             {person.name.toUpperCase()} IS
           </label>
           <div className="flex items-center gap-2">
-            <input
+            <NumericGroupedInput
               id="hours-input"
-              type="text"
               value={person.ageInHours}
-              onChange={(e) => updatePersonAge(person.id, Number(e.target.value) || 0)}
-              className="border border-gray-300 rounded px-2 py-1 text-lg outline-none"
+              onChange={(hours) => updatePersonAge(person.id, hours)}
               placeholder="0"
             />
-            <span className="text-gray-600">hours old</span>
+            <span className="shrink-0 font-[Inter,sans-serif] text-[18px] font-normal leading-none tracking-normal text-gray-600">
+              hours old
+            </span>
           </div>
         </div>
       </div>

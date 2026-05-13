@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { NumericGroupedInput } from '@/components/NumericGroupedInput'
 import { useStore } from '@/store'
 
 export default function Settings() {
@@ -18,12 +19,10 @@ export default function Settings() {
           MINIMUM AGE
         </label>
         <div className="flex items-center gap-2">
-          <input
+          <NumericGroupedInput
             id="min-age-input"
-            type="text"
             value={minimumAgeInMonths}
-            onChange={(e) => setMinimumAgeInMonths(Number(e.target.value) || 0)}
-            className="border border-gray-300 rounded px-2 py-1 text-lg outline-none"
+            onChange={setMinimumAgeInMonths}
             placeholder="0"
           />
           <span className="text-gray-600">months</span>
