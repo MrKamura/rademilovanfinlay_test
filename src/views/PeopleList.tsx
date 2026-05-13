@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { publicUrl } from '@/lib/publicUrl'
+import { avatarPhotoUrl } from '@/lib/publicUrl'
 import { useStore } from '@/store'
 
 export default function PeopleList() {
@@ -22,7 +22,7 @@ export default function PeopleList() {
             className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:border-violet-500"
           >
             <img
-              src={publicUrl('img.png')}
+              src={avatarPhotoUrl}
               alt={person.name}
               className="w-10 h-10 rounded-full border-2 border-violet-500 object-cover"
             />

@@ -1,6 +1,6 @@
 # Front-end task — numeric input (React)
 
-![Figma preview](./public/img.png)
+![Figma preview](./public/ac5399700333c1dbd7fc7aca9bc3cf75fa88de6b.jpg)
 
 [Figma — Front-end UI task](https://www.figma.com/file/OcyCt22I1Ha3fgLzGi0ZZy/Front-end-UI-Task?type=design&node-id=1-4&mode=design&t=ZzZ3vo84xwZ6uxJF-0)
 
