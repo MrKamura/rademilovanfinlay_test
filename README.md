@@ -49,32 +49,6 @@ If `npm ci` fails because `package-lock.json` is out of date, run `npm install` 
 
 ---
 
-## Deploying to GitHub Pages
-
-Workflow: [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml).
-
-On push to **`main`** or **`master`**, GitHub Actions builds the app with `VITE_BASE_URL` set to `/<repository-name>/` (for project sites such as `https://<user>.github.io/<repo>/`), copies `index.html` to `404.html` for SPA deep links on Pages, then publishes the **`dist`** folder.
-
-### One-time repository setup
-
-1. Open **Settings → Pages**.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
-
-Wait for the workflow to finish; the site URL will match your Pages configuration (typically `https://<user>.github.io/<repo>/`).
-
-### Serving from the domain root
-
-If Pages is hosted at the site root (e.g. a `username.github.io` repo or custom domain root), override the Build step environment in the workflow:
-
-```yaml
-env:
-  VITE_BASE_URL: /
-```
-
-Then push again to rebuild.
-
----
-
 ## Stack
 
 Vite · React · TypeScript · Tailwind CSS v4 · React Router · Zustand.
