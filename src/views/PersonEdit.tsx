@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { NumericGroupedInput } from '@/components/NumericGroupedInput'
+import { publicUrl } from '@/lib/publicUrl'
 import { useStore } from '@/store'
 
 export default function PersonEdit() {
@@ -26,7 +27,7 @@ export default function PersonEdit() {
 
       <div className="group/person flex items-center gap-3">
         <img
-          src="/img.png"
+          src={publicUrl('img.png')}
           alt={person.name}
           className="size-[80px] shrink-0 rounded-full border-2 border-transparent object-cover transition-colors group-focus-within/person:border-violet-500"
         />
